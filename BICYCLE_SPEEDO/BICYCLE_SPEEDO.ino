@@ -32,16 +32,17 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);   //LCD Object
 
 uint32_t prevTime = 0, lastTime = 0, tripTimer = 0;
 double rpm = 0;
-int ledState, lastLedState = 0, lastTrip = 0, trip = 0;
-byte counter = 0;
-bool timerStop = true, state, lastState = 1; 
+uint16_t lastTrip = 0, trip = 0;
+uint8_t counter = 0;
+bool timerStop = true, ledState, lastLedState = 0, 
+     state, lastState = 1; 
 
 String getTripTime(){                               // This turns our millisecond trip clock
    String t;                                        // Into human readable time
-   long s = tripTimer / 1000;
-   int m  = s / 60;
+   uint16_t s = tripTimer / 1000;
+   uint16_t m  = s / 60;
    s %= 60;
-   int h = m / 60;
+   uint16_t h = m / 60;
    m %= 60;
    char buf[17];
    sprintf(buf,"TIME : %02u:%02u:%02u", h, m, s);
