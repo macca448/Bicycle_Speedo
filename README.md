@@ -5,4 +5,4 @@ You can use either a IR Sensor or a Hall Effect Sensor to monitor wheel revoluti
 
 Library included if you have an I2C LCD 
 
-![Wiring Guide](https://github.com/macca448/Bicycle_Speedo/blob/main/speedo.png)
+![Wiring Guide](https://github.com/macca448/Bicycle_Speedo/blob/main/speedo_wiring.png)
